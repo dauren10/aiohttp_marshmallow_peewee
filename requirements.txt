@@ -1,0 +1,4 @@
+aiohttp>=3.7
+marshmallow>=3.12
+peewee-async>=0.6
+aiopg
