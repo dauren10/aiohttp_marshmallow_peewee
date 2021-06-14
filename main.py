@@ -1,6 +1,11 @@
 # examples/server_simple.py
 from aiohttp import web
+from model import *
 
+#with db:
+ #   db.create_tables([Cat,Article])
+with db:
+    cat=Cat(name='Python').save()
 async def handle(request):
     name = request.match_info.get('name', "Anonymous")
     text = "Hello, " + name
